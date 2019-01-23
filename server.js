@@ -1,4 +1,4 @@
-console.log('server.js loaded')
+//console.log('server.js loaded')
 
 http = require('http')
 port = process.env.PORT || 3000
@@ -8,6 +8,6 @@ server = http.createServer((req, res) => {
   res.end(`Hello World, server time is ${Date()}\n`);
 });
 
-
-server.listen(port)
-console.log(`listening to port ${port}`);
+server.listen(port, function () {
+    console.log(`brcavar server.js listening to port ${port}`)
+});
